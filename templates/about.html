@@ -1,1 +1,68 @@
-<h1> ABOUT </h1>
+{% load staticfiles %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'> 
+<link href="http://users.humboldt.edu/smtuttle/styles/normalize.css" type="text/css" rel="stylesheet" />
+
+
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="MusExplore" href="http://musexplore.space/">MusExplore</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        </ul>
+
+
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://musexplore.space/">Home</a></li>
+          <li><a href="http://musexplore.space/about/">About</a></li>
+          <li><a href="http://musexplore.space/contact/">Contact</a></li>
+          <li><a href="http://musexplore.space/help/">Help</a></li>
+          <li class="login"><a href="http://musexplore.space/signup/">Sign Up</a></li>
+          <li class="login"><a href="http://musexplore.space/login/">Login</a></li>
+
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+  <br><br><br><br>
+  <div class="container-fluid">
+  <h1> About MusExplore </h1>
+  <br><br>
+
+    
+  <div class="row">
+    <div class="col-md-6">
+  <p class="AboutUs"> About Us </p>
+  <p class="details"> MusExplore is a web tool used to gather details and ratings from various artists across the world. We use Pitchfork and last.fm to query these results, and output everything on our simple, easy to use website--without needing to go to multiple! </p>
+    </div>
+
+  <div class="col-md-6">
+  <p class="links"> Links We Use </p>
+    
+  <p class="LinksDetails"> Provided is a link to Pitchfork, where we retrive ratings:
+    <a href="http://pitchfork.com/">http://pitchfork.com/</a></p>
+   <p class="LinksDetails"> Provided is a link to last.fm, where we retrive artist details:
+    <a href="http://www.last.fm/">http://www.last.fm/<a/></p>
+    </div>
+    </div>
+  </div>

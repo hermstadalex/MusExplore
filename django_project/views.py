@@ -13,3 +13,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html' )
+
+def help(request):
+    return render(request, 'help.html' )

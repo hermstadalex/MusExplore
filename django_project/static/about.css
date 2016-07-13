@@ -24,10 +24,6 @@ a:hover{
   color: white;
 }
 
-.login{
-  
-}
-
 .AboutUs{
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.8em;
@@ -47,14 +43,6 @@ a:hover{
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.2em;
 }
-
-/*
-.VerticalLine{
-  border-left: thin solid black;
-  width: 0.3em;
-  height: 10em;
-}
-*/
 
 .navbar-default 
 {

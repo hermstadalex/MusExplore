@@ -2,7 +2,7 @@
   color: white;
 }
 
-a:hover {
+a:hover, :focus {
   text-decoration: none;
   color: white;
 }
@@ -25,10 +25,13 @@ a:hover {
   font-size: 2.7em;
   font-weight: normal;
 }
+
 .EmailSupport{ 
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.8em;
+  font-weight: normal;
 }
+
 .details {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.2em;
@@ -70,7 +73,6 @@ border-radius: 11px;
 padding-left: 10px;
 padding-right: 10px;
 }
-
 
 
 

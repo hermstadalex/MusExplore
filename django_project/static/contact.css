@@ -26,11 +26,13 @@ a:hover, :focus {
   font-weight: normal;
 }
 
+
 .EmailSupport{ 
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.8em;
   font-weight: normal;
 }
+
 
 .details {
   font-family: 'Alegreya Sans', sans-serif;
@@ -73,10 +75,6 @@ border-radius: 11px;
 padding-left: 10px;
 padding-right: 10px;
 }
-
-
-
-
 
 
 

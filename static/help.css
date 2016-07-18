@@ -58,31 +58,3 @@ a:hover {
     width: 65em;  
     margin: 0 auto;
 }
-
-.btn.btn-round.btn-default{
-  background-color: black;
-  color: white;
-}
-.btn-round-lg{
-border-radius: 22.5px;
-}
-.btn-round{
-border-radius: 17px;
-}
-.btn-round-sm{
-border-radius: 15px;
-}
-.btn-round-xs{
-border-radius: 11px;
-padding-left: 10px;
-padding-right: 10px;
-}
-
-
-
-
-
-
-
-
-

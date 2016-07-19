@@ -25,7 +25,7 @@ a:hover {
   font-size: 2.7em;
   font-weight: normal;
 }
-.EmailSupport{ 
+.Support{ 
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.8em;
 }
@@ -34,20 +34,10 @@ a:hover {
   font-size: 1.2em;
 }
 
-.SearchInstructions {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 1.5em;
-  text-align: center;
-}
 .navbar-default {
   background-color: black;
 }
 
-.title{
-  font-size: 3.0em;
-}
-
-.input-group{
-    width: 65em;  
-    margin: 0 auto;
+a:hover.linkhover {
+  color: inherit;
 }

@@ -9,7 +9,18 @@ import requests
 
 
 def index(request):
-    return render(request, 'index.html' )
+
+    if request.method == 'POST':
+        form = ArtistForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/results/')
+    else:
+        form = ArtistForm()
+
+    return render(request, 'index.html', {'form': form} )
+
+
+
 
 def about(request):
     return render(request, 'about.html' )

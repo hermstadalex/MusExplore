@@ -23,5 +23,4 @@ urlpatterns = [
     url(r'^formtest_start/', views.formtest_start, name='formtest_start'),
     url(r'^results_page/', views.results_page, name='results_page'),
 
-
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

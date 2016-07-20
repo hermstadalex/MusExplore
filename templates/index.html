@@ -49,14 +49,14 @@
   <p class="SearchInstructions"> Enter an artist for ratings and details </p>
   
   
+  <form action="/results_page/" method="post">
   <div class="input-group">
-      <input type="text" class="form-control">
+      {% csrf_token %}
+      {{ form }}
       <span class="input-group-btn">
-        <button class="btn btn-round btn-default" type="button">Search</button>
+         <input type="submit" value="Search" class="btn btn-round btn-default"/>
       </span>
-    </div>
-  
-  
-  
-  
-  
+  </div>
+  </form>
+
+ 

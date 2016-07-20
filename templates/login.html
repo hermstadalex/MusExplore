@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{% static 'help.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}" />
 <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
 
 
@@ -42,19 +42,48 @@
 </nav>
 
 
-<br><br><br><br>
-
+<br><br><br><br><br><br><br><br>
 <div class="container-fluid">
-<!--  <h1> Contact Us </h1> -->
-  <br><br>
 
-  <div class="row">
-    <div class="col-md-4 col-md-offset-1">
-      <p class="ContactUs"> Login </p>
-<br><br>
+  <div class="container">
+    <div class="row">
+		<div class="span12">
+			<form class="form-horizontal col-md-offset-0" action='' method="POST">
+			  <fieldset>
+			    <div id="legend">
+			      <legend class="LoginTitle">Login</legend>
+			    </div>
+			    <div class="control-group">
+			      <!-- Username -->
+			      <label class="control-label"  for="username">Username/Email</label>
+			      <div class="controls">
+			        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <div class="control-group">
+			      <!-- Password-->
+			      <label class="control-label" for="password">Password</label>
+			      <div class="controls">
+			        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+			      </div>
+			    </div>
+			    <br>
+			    <div class="control-group">
+			      <!-- Button -->
+			      <div class="controls">
+			        <button class="btn btn-success">Login</button>
+			      </div>
+			    </div>
+			    <br>
+            <p id="DontHaveAcc"> Don't have an account?
+              <a class="linkhover" href="http://musexplore.space/signup/">Sign Up!</a></p>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>
 
-      </div>
-    </div>
-  </div>
-
-
+  
+  
+  
+  

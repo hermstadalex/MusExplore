@@ -1,3 +1,5 @@
+
+
 .nav.navbar-nav.navbar-right li a{
   color: white;
 }
@@ -45,20 +47,4 @@ a:hover{
 .navbar-default 
 {
   background-color: black;
-}
-
-a:hover.linkhover {
-  color: inherit;
-}
-
-
-.img-container{
-  height: 220px;
-  width: 330px;
-}
-
-.img-container .img-responsive{
-  display: block;
-  width: auto;
-  max-height: 100%;
 }

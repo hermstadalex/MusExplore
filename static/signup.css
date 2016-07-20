@@ -1,0 +1,94 @@
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.MusExplore {
+  font-family: 'Alegreya Sans', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1.7em;
+  float: left;
+  padding: 0.35em;
+}
+
+.navbar-brand a {
+  color: white;
+}
+
+.SignUp {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.8em;
+}
+
+.control-label {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.help-block{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+#HaveAcc{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2em;
+}
+
+a:hover.linkhover {
+  color: inherit;
+}
+
+.btn.btn-success{
+  background-color: black;
+  color: white;
+}
+
+.navbar-default {
+  background-color: black;
+}
+
+
+
+.input-group{
+    width: 65em;  
+    margin: 0 auto;
+}
+
+.btn.btn-round.btn-default{
+  background-color: black;
+  color: white;
+}
+.btn-round-lg{
+border-radius: 22.5px;
+}
+.btn-round{
+border-radius: 17px;
+}
+.btn-round-sm{
+border-radius: 15px;
+}
+.btn-round-xs{
+border-radius: 11px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+

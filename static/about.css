@@ -50,3 +50,15 @@ a:hover{
 a:hover.linkhover {
   color: inherit;
 }
+
+
+.img-container{
+  height: 300px;
+  width: 430px;
+}
+
+.img-container .img-responsive{
+  display: block;
+  width: auto;
+  max-height: 100%;
+}

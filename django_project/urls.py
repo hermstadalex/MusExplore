@@ -20,5 +20,8 @@ urlpatterns = [
     url(r'^help/', views.help, name='help'),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^login/', views.login, name='login'),
+    url(r'^formtest_start/', views.formtest_start, name='formtest_start'),
+    url(r'^results_page/', views.results_page, name='results_page'),
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

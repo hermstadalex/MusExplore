@@ -1,8 +1,20 @@
+.img-container{
+  height: 220px;
+}
+
+.container .img-responsive{
+  display: block;
+  max-height: 100%;
+  width: auto;
+}
+
+
 
 
 .nav.navbar-nav.navbar-right li a{
   color: white;
 }
+
 h1 {
   text-align: center;  
 }
@@ -47,4 +59,8 @@ a:hover{
 .navbar-default 
 {
   background-color: black;
+}
+
+a:hover.linkhover {
+  color: inherit;
 }

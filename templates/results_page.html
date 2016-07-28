@@ -62,27 +62,48 @@
          </thread>
          <tbody>
             <tr>
-            <td>album result</td>
+               {% for album in top_albums %}
+                  {% if forloop.first %}
+            <td> {{ album }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>pitchfork rating result</td>
             </tr>
             
             <tr>
-            <td>album result</td>
+               {% for album in top_albums %}
+                  {% if forloop.counter == 2 %}
+            <td> {{ album }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>pitchfork rating result</td>
             </tr>
             
             <tr>
-            <td>album result</td>
+               {% for album in top_albums %}
+                  {% if forloop.counter == 3 %}
+            <td> {{ album }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>pitchfork rating result</td>
             </tr>
             
             <tr>
-            <td>album result</td>
+               {% for album in top_albums %}
+                  {% if forloop.counter == 4 %}
+            <td> {{ album }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>pitchfork rating result</td>
             </tr>
             
+            
             <tr>
-            <td>album result</td>
+               {% for album in top_albums %}
+                  {% if forloop.counter == 5 %}
+            <td> {{ album }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>pitchfork rating result</td>
             </tr>
 
@@ -101,12 +122,6 @@
 
 
 
-
-<ul>
-   {% for album in top_albums %}
-      <li> {{ album }} </li>
-   {% endfor %}
-</ul>
       </table>
    </div> <!-- close table responsive -->
 </div> <!-- end col div for album table -->
@@ -124,25 +139,39 @@
          <caption class="text-center"></caption>
          <thread>
             <tr>
+               
                <th>Artist Name</th>
                <th>Artist Details and Ratings (will be a link)</th>
             </tr>
          </thread>
          <tbody>
             <tr>
-            <td>similar artist </td>
+               {% for artist in simArtist %}
+                  {% if forloop.first %}
+               <td> {{ artist }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>artist link</td>
             </tr>
             
             <tr>
-            <td>similar artist</td>
+               {% for artist in simArtist %}
+                  {% if forloop.counter == 2 %}
+               <td> {{ artist }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>artist link</td>
             </tr>
             
             <tr>
-            <td>similar artist</td>
+               {% for artist in simArtist %}
+                  {% if forloop.counter == 3 %}
+               <td> {{ artist }} </td>
+                  {% endif %}
+               {% endfor %}
             <td>artist link</td>
             </tr>
+
 
          </tbody>
          <tfoot>
@@ -155,17 +184,6 @@
    </div>
 </div>
 </div>
-
-
-
-
-
-
-<ul>
-   {% for artist in simArtist %}
-      <li> {{ artist }} </li>
-   {% endfor %}
-</ul>
 
 
 

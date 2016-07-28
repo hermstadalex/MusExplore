@@ -70,5 +70,8 @@ def results_page(request):
         top_albums.append(r.json()["topalbums"]["album"][i]["name"])
     for j in range(3):
         simArtist.append(s.json()["similarartists"]["artist"][j]["name"])
-    
+    artist = r.json()["topalbums"]["@attr"]["artist"]
     return render(request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist},) 
+
+
+

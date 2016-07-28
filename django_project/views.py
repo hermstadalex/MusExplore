@@ -71,4 +71,4 @@ def results_page(request):
     for j in range(3):
         simArtist.append(s.json()["similarartists"]["artist"][j]["name"])
     
-    return render(request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist},) 
+    return render(request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist},) 

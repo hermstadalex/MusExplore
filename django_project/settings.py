@@ -107,4 +107,4 @@ STATICFILES_DIRS = [
                 '/var/www/static/',
                 ]
 
-print "base dir path", BASE_DIR
+GEOIP_PATH = '/home/django/django_project/django_project/static'

@@ -6,6 +6,10 @@ from django.template.loader import get_template
 from .forms import ArtistForm
 import requests
 
+from ipware.ip import get_real_ip
+
+from django.contrib.gis.geoip import GeoIP
+
 
 
 def index(request):
@@ -75,3 +79,14 @@ def results_page(request):
 
 
 
+def test_loc(request):
+
+    ip = get_real_ip(request)
+    if ip is not None:
+        g = GeoIP()
+        render_var = g.city(ip)['city']
+    else:
+       # we don't have a real, public ip address for user
+       render_var = 'Not real'
+    
+    return render(request, 'test_loc.html', {'render_var': render_var })

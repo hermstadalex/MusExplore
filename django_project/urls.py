@@ -22,5 +22,7 @@ urlpatterns = [
     url(r'^login/', views.login, name='login'),
     url(r'^formtest_start/', views.formtest_start, name='formtest_start'),
     url(r'^results_page/', views.results_page, name='results_page'),
+    url(r'^test_loc/', views.test_loc, name='test_loc'),
+
 
 ] 

@@ -15,7 +15,7 @@ from django.contrib.gis.geoip import GeoIP
 def index(request):
 
     if request.method == 'GET':
-        form = ArtistForm(request.GET)
+        form = ArtistForm()
         if form.is_valid():
             return HttpResponseRedirect('/results/')
     else:

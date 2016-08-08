@@ -49,9 +49,8 @@
   <p class="SearchInstructions"> Enter an artist for ratings and details </p>
   
   
-  <form action="/results_page/" method="post">
+  <form action="/results_page/" method="get">
   <div class="input-group">
-      {% csrf_token %}
       {{ form }}
       <span class="input-group-btn">
          <input type="submit" value="Search" class="btn btn-round btn-default"/>

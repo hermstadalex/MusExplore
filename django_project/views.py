@@ -10,8 +10,8 @@ import requests
 
 def index(request):
 
-    if request.method == 'POST':
-        form = ArtistForm(request.POST)
+    if request.method == 'GET':
+        form = ArtistForm(request.GET)
         if form.is_valid():
             return HttpResponseRedirect('/results/')
     else:
@@ -55,13 +55,15 @@ def formtest_start(request):
 
 def results_page(request):
 
-    artist = request.POST.items()[1][1] 
-    similarArtist= request.POST.items()[1][1]
+    artist = request.GET.items()[0][1]
+    similarArtist= request.GET.items()[0][1]
+
+    print artist
 
     url = 'http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=' + artist + '&api_key=673c370b7184a43691df1c7c2b35874f&format=json'
     url2 = 'http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=' + similarArtist + '&api_key=673c370b7184a43691df1c7c2b35874f&format=json'
     r = requests.get( url )
-    s = requests.get(url2 )
+    s = requests.get( url2 )
 
     top_albums = []
     simArtist = []

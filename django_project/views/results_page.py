@@ -3,59 +3,7 @@ from django.http import HttpResponse
 from django.template import Template
 from django.template.loader import get_template
 
-from .forms import ArtistForm
 import requests
-
-from ipware.ip import get_real_ip
-
-from django.contrib.gis.geoip import GeoIP
-
-
-
-def index(request):
-
-    if request.method == 'GET':
-        form = ArtistForm()
-        if form.is_valid():
-            return HttpResponseRedirect('/results/')
-    else:
-        form = ArtistForm()
-
-    return render(request, 'index.html', {'form': form} )
-
-
-
-
-def about(request):
-    return render(request, 'about.html' )
-
-def contact(request):
-    return render(request, 'contact.html' )
-
-def help(request):
-    return render(request, 'help.html' )
-
-def signup(request):
-    return render(request, 'signup.html' )
-
-def login(request):
-    return render(request, 'login.html' )
-
-def formtest_start(request):
-
-    if request.method == 'POST':
-        form = ArtistForm(request.POST)
-
-        if form.is_valid():
-            return HttpResponseRedirect('/results/')
-    else:
-        form = ArtistForm()
-
-    return render(request, 'formtest.html', {'form': form} )
-
-
-
-
 
 def results_page(request):
 
@@ -74,7 +22,7 @@ def results_page(request):
     top_albums = []
     simArtist = []
     top_genre = []
-    
+
     for i in range(5):
         top_albums.append(r.json()["topalbums"]["album"][i]["name"])
     for j in range(3):
@@ -94,20 +42,8 @@ def results_page(request):
         top_genre.append(simArtist2_genre.json()["toptags"]["tag"][l]["name"])
         top_genre.append(simArtist3_genre.json()["toptags"]["tag"][l]["name"])
 
-        
+
     artist = r.json()["topalbums"]["@attr"]["artist"]
-    return render(request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist, 'top_genre': top_genre},) 
+    return render(request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist, 'top_genre': top_genre},)
 
 
-
-def test_loc(request):
-
-    ip = get_real_ip(request)
-    if ip is not None:
-        g = GeoIP()
-        render_var = g.city(ip)['city']
-    else:
-       # we don't have a real, public ip address for user
-       render_var = 'Not real'
-    
-    return render(request, 'test_loc.html', {'render_var': render_var })

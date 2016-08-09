@@ -142,35 +142,50 @@
             <tr>
                
                <th>Artist Name</th>
-               <th>Artist Details and Ratings (will be a link)</th>
+               <th>Genre</th>
             </tr>
          </thread>
          <tbody>
             <tr>
                {% for artist in simArtist %}
                   {% if forloop.first %}
-               <td> {{ artist }} </td>
+               <td> <a href='/results_page/?artist_name={{artist}}'>{{artist}}</a> </td>
                   {% endif %}
                {% endfor %}
-            <td> <!-- put artist link code in each td --> </td>
+               
+               {% for tag in top_genre %}
+                  {% if forloop.first %}
+            <td> {{tag}} </td>
+                  {% endif %}
+               {% endfor %}                  
             </tr>
             
             <tr>
                {% for artist in simArtist %}
                   {% if forloop.counter == 2 %}
-               <td> {{ artist }} </td>
+               <td> <a href='/results_page/?artist_name={{artist}}'>{{artist}} </a> </td>
                   {% endif %}
                {% endfor %}
-            <td></td>
+               
+               {% for tag in top_genre %}
+                  {% if forloop.counter == 2 %}
+               <td> {{tag}} </td>
+                  {% endif %}
+               {% endfor %}
             </tr>
             
             <tr>
                {% for artist in simArtist %}
                   {% if forloop.counter == 3 %}
-               <td> {{ artist }} </td>
+               <td> <a href='/results_page/?artist_name={{artist}}'>{{ artist }}</a> </td>
                   {% endif %}
                {% endfor %}
-            <td></td>
+               
+               {% for tag in top_genre %}
+                  {% if forloop.counter == 3 %}
+            <td> {{tag}} </td>
+                  {% endif %}
+               {% endfor %}
             </tr>
 
 

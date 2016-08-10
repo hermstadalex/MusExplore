@@ -4,6 +4,12 @@ h2{
   font-weight: bold;
 }
 
+h4{
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: bold;
+}
+
 table caption{
   padding: .5em 0;
 }

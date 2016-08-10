@@ -3,10 +3,11 @@ from django.http import HttpResponse
 from django.template import Template
 from django.template.loader import get_template
 
-from .forms import ArtistForm
 import requests
 
 from ipware.ip import get_real_ip
+
+from ..forms import *
 
 from django.contrib.gis.geoip import GeoIP
 

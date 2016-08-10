@@ -50,6 +50,12 @@
 
 <div class="container-fluid">
    <h2>{{ artist }}</h2>
+   <h4> Genre: 
+               {% for tag in top_genre %}
+                  {% if forloop.first %}
+             {{tag}} 
+                  {% endif %}
+               {% endfor %}                 </h4>
 <div class="col-md-6 col-md-offset-3 col-xs-12">
    <div class="table-responsive">
       <table class="table table-bordered table-hover"
@@ -154,7 +160,7 @@
                {% endfor %}
                
                {% for tag in top_genre %}
-                  {% if forloop.first %}
+                  {% if forloop.counter == 2 %}
             <td> {{tag}} </td>
                   {% endif %}
                {% endfor %}                  
@@ -168,7 +174,7 @@
                {% endfor %}
                
                {% for tag in top_genre %}
-                  {% if forloop.counter == 2 %}
+                  {% if forloop.counter == 3 %}
                <td> {{tag}} </td>
                   {% endif %}
                {% endfor %}
@@ -182,7 +188,7 @@
                {% endfor %}
                
                {% for tag in top_genre %}
-                  {% if forloop.counter == 3 %}
+                  {% if forloop.counter == 4 %}
             <td> {{tag}} </td>
                   {% endif %}
                {% endfor %}

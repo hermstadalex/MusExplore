@@ -124,3 +124,9 @@ LOGGING = {
         },
     },
 }
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'hermstadalex'
+EMAIL_HOST_PASSWORD = 'Mattermax1!'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

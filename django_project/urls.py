@@ -1,5 +1,5 @@
-from django.conf.urls import patterns, include, url
-from views import *
+from django.conf.urls import include, url
+from .views import *
 from django.template import loader
 from django.contrib import admin
 from django.conf import settings
@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^signup/', signup, name='signup'),
     url(r'^login/', login, name='login'),
     url(r'^results_page/', results_page, name='results_page'),
+    url(r'^contact/', contact, name='contact'),
+
 
 
 ] 

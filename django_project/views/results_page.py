@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Template
@@ -5,6 +7,8 @@ from django.template.loader import get_template
 
 import requests
 import logging
+
+from .. import pitchfork
 
 def results_page(request):
     """
@@ -15,9 +19,11 @@ def results_page(request):
     logger.info('hello')
 
 
+    print (list(request.GET.items()))
 
     # Get whatever the user entered into the form, and store it into a variable
-    artist = request.GET.items()[0][1]
+    artist = list(request.GET.items())[0][1]
+
 
 
     # Make three URLs to be requests to the Last FM API: top albums, similar artists, and top tags
@@ -60,5 +66,15 @@ def results_page(request):
         top_genre.append( topTagsRequest.json()["toptags"]["tag"][0]["name"] )
         
     artist = topAlbumsRequest.json()["topalbums"]["@attr"]["artist"]
+
+    pitchfork_ratings = []
+
+    # Get the pitchfork ratings of each top album
+    for album in top_albums:
+        search = pitchfork.search(artist, album) 
+
+        pitchfork_ratings.append( search.score() )
+
+
 
     return render( request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist, 'top_genre': top_genre })

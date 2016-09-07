@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^login/', login, name='login'),
     url(r'^results_page/', results_page, name='results_page'),
 
-
 ] 

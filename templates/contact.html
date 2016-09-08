@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% block content %}
 <h1> Contact </h1>
 
@@ -7,4 +8,110 @@
    <button type="submit">Submit</button>
 </form>
 {% endblock %}
+=======
+{% load staticfiles %}
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}" />
+<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="MusExplore" href="http://musexplore.space/">MusExplore</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+
+
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://musexplore.space/">Home</a></li>
+        <li><a href="http://musexplore.space/about/">About</a></li>
+        <li><a href="http://musexplore.space/contact/">Contact</a></li>
+        <li><a href="http://musexplore.space/help/">Help</a></li>
+        <li class="login"><a href="http://musexplore.space/signup/">Sign Up</a></li>
+        <li class="login"><a href="http://musexplore.space/login/">Login</a></li>
+
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+
+<br><br><br><br>
+<div class="container-fluid">
+<!--  <h1> Contact Us </h1> -->
+  <br><br>
+	 
+
+
+  
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+      <br><br><br>
+      <p class="ContactUs"> Contact Us </p>
+<br><br>
+      <p class="Support"> Email Support </p>
+      <p class="details"> Feel free to reach us at <a class="linkhover" href="mailto:musexplore@gmail.com?subject=MusExplore Support Question">musexplore@gmail.com</a>.
+      </p> 
+     <p> We will do our best to get back to you as quickly as we can! 
+      </p>
+
+<br>
+
+
+      <p class="Support"> Twitter Support </p>
+      <p class="details"> Follow us on Twitter for development news, updates, and more! 
+      </p>
+      <a href="https://twitter.com/MusExplore" class="twitter-follow-button" data-show-count="false">Follow @MusExplore</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br><br>
+
+      <p class="Support"> Facebook Support </p>
+      <p class="details"> Facebook support is available! Visit our page here: <a class="linkhover" href="https://www.facebook.com/Musexplore/">https://www.facebook.com/Musexplore/</a> 
+      <div class="fb-like" data-href="https://www.facebook.com/Musexplore/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      
+      </p>
+    </div>
+<br><br>
+    <div class="col-md-offset-4">
+     
+<div class="col-md-3 col-xs-4 col-md-offset-2">
+<img src="{% static "Optimized-c1e20b4138ffb75a787fd72e690c983f.jpg" %}" class="img-circle" alt="Cinque Terre" width="500" height="500">
+</div>
+
+      </div>
+    </div>
+  </div>
+  
+>>>>>>> 3cb9369bc8670c2e5d7a99177e6130e17e50cbde
 

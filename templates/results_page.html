@@ -50,12 +50,7 @@
 
 <div class="container-fluid">
    <h2>{{ artist }}</h2>
-   <h4> Genre: 
-               {% for tag in top_genre %}
-                  {% if forloop.first %}
-             {{tag}} 
-                  {% endif %}
-               {% endfor %}                 </h4>
+   <h4> Genre: {{ main_genre }} </h4>
 <div class="col-md-6 col-md-offset-3 col-xs-12">
    <div class="table-responsive">
       <table class="table table-bordered table-hover"
@@ -68,52 +63,14 @@
             </tr>
          </thread>
          <tbody>
-            <tr>
-               {% for album in top_albums %}
-                  {% if forloop.first %}
-            <td> {{ album }} </td>
-                  {% endif %}
-               {% endfor %}
-            <td> <!-- put pitchfork rating code in these td's in future --> </td>
-            </tr>
-            
-            <tr>
-               {% for album in top_albums %}
-                  {% if forloop.counter == 2 %}
-            <td> {{ album }} </td>
-                  {% endif %}
-               {% endfor %}
-            <td></td>
-            </tr>
-            
-            <tr>
-               {% for album in top_albums %}
-                  {% if forloop.counter == 3 %}
-            <td> {{ album }} </td>
-                  {% endif %}
-               {% endfor %}
-            <td></td>
-            </tr>
-            
-            <tr>
-               {% for album in top_albums %}
-                  {% if forloop.counter == 4 %}
-            <td> {{ album }} </td>
-                  {% endif %}
-               {% endfor %}
-            <td></td>
-            </tr>
-            
-            
-            <tr>
-               {% for album in top_albums %}
-                  {% if forloop.counter == 5 %}
-            <td> {{ album }} </td>
-                  {% endif %}
-               {% endfor %}
-            <td></td>
-            </tr>
 
+            {% for album, rating in pitchfork_albums %}
+               <tr>
+                  <td> {{ album }} </td>
+                  <td> {{ rating }} </td>
+               </tr>
+            {% endfor %}
+            
          </tbody>
          <tfoot>
             <tr>
@@ -127,15 +84,12 @@
 </div>
 
 
-
-
       </table>
    </div> <!-- close table responsive -->
 </div> <!-- end col div for album table -->
 
 
 <br>
-
 
 
 <h2>Similar Artists</h2>
@@ -146,54 +100,18 @@
          <caption class="text-center"></caption>
          <thread>
             <tr>
-               
                <th>Artist Name</th>
                <th>Genre</th>
             </tr>
          </thread>
          <tbody>
-            <tr>
-               {% for artist in simArtist %}
-                  {% if forloop.first %}
-               <td> <a href='/results_page/?artist_name={{artist}}'>{{artist}}</a> </td>
-                  {% endif %}
-               {% endfor %}
-               
-               {% for tag in top_genre %}
-                  {% if forloop.counter == 2 %}
-            <td> {{tag}} </td>
-                  {% endif %}
-               {% endfor %}                  
-            </tr>
-            
-            <tr>
-               {% for artist in simArtist %}
-                  {% if forloop.counter == 2 %}
-               <td> <a href='/results_page/?artist_name={{artist}}'>{{artist}} </a> </td>
-                  {% endif %}
-               {% endfor %}
-               
-               {% for tag in top_genre %}
-                  {% if forloop.counter == 3 %}
-               <td> {{tag}} </td>
-                  {% endif %}
-               {% endfor %}
-            </tr>
-            
-            <tr>
-               {% for artist in simArtist %}
-                  {% if forloop.counter == 3 %}
-               <td> <a href='/results_page/?artist_name={{artist}}'>{{ artist }}</a> </td>
-                  {% endif %}
-               {% endfor %}
-               
-               {% for tag in top_genre %}
-                  {% if forloop.counter == 4 %}
-            <td> {{tag}} </td>
-                  {% endif %}
-               {% endfor %}
-            </tr>
 
+            {% for artist, tag in sim_artist_genre %}
+               <tr>
+                  <td> <a href='/results_page/?artist_name={{artist}}'>{{artist}}</a> </td>
+                  <td> {{tag}} </td>
+               </tr>
+            {% endfor %}
 
          </tbody>
          <tfoot>

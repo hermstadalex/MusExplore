@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Template
@@ -8,21 +6,17 @@ from django.template.loader import get_template
 import requests
 import logging
 
-from .. import pitchfork
+import pitchfork
+
 
 def results_page(request):
     """
         This is the view corresponding to the page that will appear when a user enters an artist into the search bar
     """
-    logger = logging.getLogger(__name__)
 
-    logger.info('hello')
-
-
-    print (list(request.GET.items()))
 
     # Get whatever the user entered into the form, and store it into a variable
-    artist = list(request.GET.items())[0][1]
+    artist = request.GET.items()[0][1]
 
 
 
@@ -42,7 +36,7 @@ def results_page(request):
     top_genre = []
 
     # First, append the main artist's genre to the genre list
-    top_genre.append( artistGenreList.json()["toptags"]["tag"][0]["name"] )
+    main_genre = artistGenreList.json()["toptags"]["tag"][0]["name"] 
 
     # Add the top 5 results from the top albums request to the list
     for i in range(5):
@@ -76,5 +70,19 @@ def results_page(request):
         pitchfork_ratings.append( search.score() )
 
 
+    # Zip the album list and the pitchfork rating list into one structure
+    pitchfork_album_array = zip( top_albums, pitchfork_ratings )
 
-    return render( request, 'results_page.html', {'top_albums': top_albums, 'simArtist': simArtist, 'artist': artist, 'top_genre': top_genre })
+    # Zip the similar artists and their genres together
+    sim_artist_genre = zip( simArtist, top_genre )
+
+
+
+
+
+
+    return render( request, 'results_page.html', {'pitchfork_albums': pitchfork_album_array, 'sim_artist_genre': sim_artist_genre, 'artist': artist, 'main_genre': main_genre })
+
+
+
+

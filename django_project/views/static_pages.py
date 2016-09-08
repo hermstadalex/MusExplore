@@ -11,3 +11,5 @@ def about(request):
 def help(request):
     return render(request, 'help.html' )
 
+def contact(request):
+    return render(request, 'contact.html' )

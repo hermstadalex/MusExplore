@@ -65,9 +65,13 @@ def results_page(request):
 
     # Get the pitchfork ratings of each top album
     for album in top_albums:
-        search = pitchfork.search(artist, album) 
 
-        pitchfork_ratings.append( search.score() )
+        try:
+            search = pitchfork.search(artist, album) 
+            pitchfork_ratings.append( search.score() )
+
+        except IndexError:
+            pitchfork_ratings.append( 'N/A' )
 
 
     # Zip the album list and the pitchfork rating list into one structure

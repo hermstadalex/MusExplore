@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Template
 from django.template.loader import get_template
+from ..forms import *
 
 import requests
 import logging
@@ -13,6 +14,20 @@ def results_page(request):
     """
         This is the view corresponding to the page that will appear when a user enters an artist into the search bar
     """
+
+
+    # this is for the search bar on results page
+    if request.method == 'GET':
+        form = ArtistForm()
+        if form.is_valid():
+            return HttpResponseRedirect('/results/')
+    else:
+        form = ArtistForm()
+
+
+
+
+
 
 
     # Get whatever the user entered into the form, and store it into a variable
@@ -85,7 +100,7 @@ def results_page(request):
 
 
 
-    return render( request, 'results_page.html', {'pitchfork_albums': pitchfork_album_array, 'sim_artist_genre': sim_artist_genre, 'artist': artist, 'main_genre': main_genre })
+    return render( request, 'results_page.html', {'pitchfork_albums': pitchfork_album_array, 'sim_artist_genre': sim_artist_genre, 'artist': artist, 'main_genre': main_genre, 'form': form })
 
 
 

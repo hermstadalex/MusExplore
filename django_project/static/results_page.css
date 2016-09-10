@@ -80,11 +80,6 @@ a:hover {
   font-size: 3.0em;
 }
 
-.input-group{
-    width: 65em;  
-    margin: 0 auto;
-}
-
 
 td:first-child{
   width: 50%;
@@ -94,6 +89,39 @@ td:last-child{
   width: 50%;
 }
 
+
+
+
+
+.SearchInstructions {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.input-group{
+    width: 25em;  
+    margin: 0 auto;
+}
+
+.btn.btn-round.btn-default{
+  background-color: black;
+  color: white;
+}
+.btn-round-lg{
+border-radius: 22.5px;
+}
+.btn-round{
+border-radius: 17px;
+}
+.btn-round-sm{
+border-radius: 15px;
+}
+.btn-round-xs{
+border-radius: 11px;
+padding-left: 10px;
+padding-right: 10px;
+}
 
 
 

@@ -45,7 +45,28 @@
 
 
 
-<br><br><br><br>
+
+<br><br><br><br><br><br>
+
+<div class="container-fluid">
+   <p class="SearchInstructions"> Search another artist </p>
+  
+  <form action="/results_page/" method="get">
+  <div class="input-group">
+      {{ form }}
+      <span class="input-group-btn">
+         <input type="submit" value="Search" class="btn btn-round btn-default"/>
+      </span>
+  </div>
+  </form>
+
+
+
+
+
+
+
+<br><br><br>
 
 
 <div class="container-fluid">
@@ -116,17 +137,11 @@
          </tbody>
          <tfoot>
             <tr>
-               <td colspan="5" class="text-center">Follow the Artist Detail links to learn more!</td>
+               <td colspan="5" class="text-center">Follow the Artist Name links to learn more!</td>
             </tr>
          </tfoot>
       </table>
    </div> <!-- ending table responsive -->
    </div>
+</div>  
 </div>
-</div>
-
-
-
-
-
-</div> <!-- close container fluid below nav bar ending -->   

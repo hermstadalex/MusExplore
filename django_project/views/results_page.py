@@ -82,6 +82,8 @@ def results_page(request):
     for album in top_albums:
 
         try:
+            artist = artist.encode('ascii', 'ignore').decode('ascii')
+            album = album.encode('ascii', 'ignore').decode('ascii')
             search = pitchfork.search(artist, album) 
             pitchfork_ratings.append( search.score() )
 
